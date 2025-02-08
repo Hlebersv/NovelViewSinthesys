@@ -2,7 +2,7 @@
 
 ![vas.png](Images%2Fvas.png)
 
-A project to create a generative diffusion model that takes as input a single (frontal) photograph of a face and outputs a synthesised image of the same person, only from a different angle (specified during generation)
+A project to create a diffusion model that takes as input a single (frontal) photograph of a face and outputs a synthesised image of the same person from a different angle (specified during generation)
 
 ### Model
 
@@ -20,11 +20,9 @@ both images. Thus, the data distribution has the form $q(x_0, x'_0, R)$.
 ![Network1.png](Images/Network1.png)
 
 
-The objective: 
+**The objective:** 
 
-$$
-L = \mathbb{E}_{\mathcal{E}(\mathbf{x_t}), \mathcal{I}(\mathbf{x_t}), R, \mathbf{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})} \| \mathbf{\epsilon} - \mathbf{\epsilon}_\theta(\mathcal{E}(\mathbf{x_t}), t, \mathcal{I}(\mathbf{x_t}), R) \|^2
-$$
+$L = \mathbb{E}_{\mathcal{E}(\mathbf{x_t}), \mathcal{I}(\mathbf{x_t}), R, \mathbf{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})} \| \mathbf{\epsilon} - \mathbf{\epsilon}_\theta(\mathcal{E}(\mathbf{x_t}), t, \mathcal{I}(\mathbf{x_t}), R) \|^2$
 
 
 
